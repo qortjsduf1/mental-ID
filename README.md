@@ -1,16 +1,66 @@
-# React + Vite
+# 📇 마음신분증 (MindID)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> **"나의 기질과 정신 상태를 증명하는 1030 감성 Y2K 픽셀 다이어리"**
+> 
+> 바쁜 일상과 인간관계 속에서 흔들리는 내면을 성찰하고, 나만의 고유한 심리 기질을 귀여운 픽셀 원석과 커스텀 신분증 카드로 발급받아 소장할 수 있는 자아 교정 힐링 웹 애플리케이션입니다.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🎨 서비스 콘셉트 & 디자인 미학
+* **레트로 Y2K 픽셀 다이어리:** 귀엽고 뽀송한 웜 크림 베이지 톤과 파스텔 피치/라벤더 색상을 적용해, 다이어리를 꾸미는 듯한 따뜻한 감성을 선사합니다.
+* **픽셀 도트 폰트:** ProjectNoonnu의 레트로 한글 픽셀 폰트인 **`둥근모`** 폰트가 앱 전체에 이식되어 아기자기한 오락실 & Y2K 다이어리 감성을 극대화합니다.
+* **나의 심리 증명서:** 보석 아이콘을 나열하는 단순 퀴즈에서 벗어나, **"나의 정신 상태를 증명하는 신분증"**이라는 위트 있고 유니크한 가치를 전달합니다.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ 핵심 기능 (Core Features)
 
-## Expanding the Oxlint configuration
+### 🎂 1. 나이 기반 기질 원석 (Gemstone) 부여
+* 진입 시 입력받은 실제 나이(userAge)에 따라 고유한 정신적 기질 원석 및 아우라가 형성됩니다.
+  * **10대 후반 (17~19세):** 💎 `사파이어 원석` (맑고 푸른 자아 정체성의 시작)
+  * **20대 청춘 (20~29세):** 💖 `로즈쿼츠 원석` (사랑과 자립을 연마해가는 열정 자아)
+  * **30대 성숙 (30~39세):** 🔮 `아메시스트(자수정) 원석` (내면 안정을 꽃피우는 성숙 자아)
+  * **40대 이상:** 💚 `에메랄드 원석` (단단한 포용력과 평온의 안착 자아)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### 🗺️ 2. 1단계: 데일리 인지 교정 성찰 (CBT Swipe)
+* 인지행동치료(CBT) 기법을 접목한 O/X 스와이프 질문지입니다. 매일 생각 왜곡(생각의 필터)을 맑게 걸러내고 행동 처방 미션을 발부받아 실천합니다.
+
+### 🗣️ 3. 2단계: 비폭력 대화 훈련 (갈등 상황 시뮬레이션)
+* 회사, 조별과제, 가족, 연인 간의 마찰 상황 시나리오 핑퐁을 거치며 나의 감정과 욕구를 건강하게 전달하는 비폭력 대화법(나-전달법)을 게임처럼 훈련합니다.
+
+### 🧠 4. 3단계: 전문 심리 & 미술 투사 진단
+* 정량 **TCI 7대 기질/성격 분석** 검사지 제공.
+* 손가락 스케치를 통한 **HTP(집-나무-사람) 미술 치료** 로컬 분석 판독기 연동.
+* Gemini AI API Key 등록 시, 인공지능이 제공하는 실시간 임상 심층 심리 분석 리포트 결합.
+
+### 📇 5. 4단계: 실물 마음 신분증 발급 및 사진 업로드
+* 나만의 고유 성향, 소통 등급, 실시간 마음 온도 지수가 기록된 한글 마음 신분증을 발급합니다.
+* 증명사진 구역을 눌러 **내 실물 사진을 업로드**하여 나만의 진짜 신분증을 소장할 수 있으며, 캡처 파일로 기기에 소장할 수 있습니다.
+
+---
+
+## 🛠️ 기술 스택 (Tech Stack)
+* **Core:** React 19, Vite
+* **Styling:** TailwindCSS, Vanilla CSS, ProjectNoonnu 'DungGeunMo' Web Font
+* **APIs & Tools:** Google Gemini AI API, html2canvas (명함 이미지 파일 캡처 보관)
+
+---
+
+## 🚀 로컬 실행 방법 (How to Run)
+
+### 1. 프로젝트 클론 및 폴더 이동
+```bash
+git clone https://github.com/qortjsduf1/mental-ID.git
+cd mental-ID
+```
+
+### 2. 의존성 패키지 설치
+```bash
+npm install
+```
+
+### 3. 로컬 개발 서버 실행
+```bash
+npm run dev
+```
+* 브라우저에서 `http://localhost:5173/`으로 접속합니다.
