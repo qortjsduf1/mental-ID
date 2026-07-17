@@ -1,0 +1,237 @@
+@import url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff');
+
+:root {
+  --bg-primary: #fdfbf7; /* 뽀송한 웜 크림 베이지 */
+  --bg-secondary: rgba(244, 63, 94, 0.03);
+  --bg-card: rgba(255, 255, 255, 0.85); /* 뽀송한 흰색 다이어리 모드 */
+  --border-color: rgba(244, 63, 94, 0.12);
+  --border-active: rgba(244, 63, 94, 0.35);
+  
+  --color-purple: #9061f9;
+  --color-purple-light: #b48eff;
+  --color-emerald: #059669;
+  --color-emerald-light: #10b981;
+  --color-rose: #e11d48;
+  --color-rose-light: #fb7185;
+  --color-amber: #d97706;
+  
+  --text-main: #2c2520; /* 웜 크림 배경 위에서 가장 선명하게 보이는 차분한 브라운 블랙 */
+  --text-muted: #574f4a;
+  --text-dark: #1a1613;
+  
+  --font-family: 'DungGeunMo', monospace;
+  --shadow-neon: 0 4px 20px rgba(244, 63, 94, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-family) !important; /* 픽셀 도트 폰트 전체 강제 바인딩 */
+}
+
+body {
+  background-color: #f7f5ee;
+  color: var(--text-main);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(251, 113, 133, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(167, 139, 250, 0.06) 0px, transparent 50%);
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Premium Mobile Container */
+.phone-simulator {
+  width: 100%;
+  max-width: 410px;
+  height: 840px;
+  background-color: var(--bg-primary);
+  border: 8px solid #f3ece0; /* 부드러운 웜 베이지 프레임 */
+  border-radius: 44px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 45px rgba(27, 22, 14, 0.06), 0 0 35px rgba(244, 63, 94, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.glass-panel-active {
+  background: rgba(244, 63, 94, 0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(244, 63, 94, 0.25);
+  border-radius: 20px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+/* Animations */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1.5deg); }
+}
+
+.float-slow {
+  animation: floatSlow 6s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(244, 63, 94, 0.1), inset 0 0 15px rgba(244, 63, 94, 0.05);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(244, 63, 94, 0.35), inset 0 0 20px rgba(244, 63, 94, 0.15);
+    transform: scale(1.02);
+  }
+}
+
+.pulse-avatar {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+.float-effect {
+  animation: float 4s infinite ease-in-out;
+}
+
+/* Gemstone Rotating Neon Aura */
+@keyframes rotateGem {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.gem-aura {
+  animation: rotateGem 8s infinite linear;
+  background: conic-gradient(from 0deg, #8b5cf6, #10b981, #f43f5e, #8b5cf6);
+  filter: blur(10px);
+  opacity: 0.45;
+}
+
+/* Chat bubble transitions */
+.chat-enter {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: chatSlideIn 0.3s forwards cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+@keyframes chatSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium card shine */
+.premium-card-glow {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(139, 92, 246, 0.15) 50%, rgba(16, 185, 129, 0.15) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 0 25px rgba(245, 158, 11, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+.premium-card-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent 45%, rgba(255, 255, 255, 0.1) 50%, transparent 55%);
+  transform: rotate(45deg);
+  animation: shine 4s infinite linear;
+}
+@keyframes shine {
+  0% { transform: translate(-30%, -30%) rotate(45deg); }
+  100% { transform: translate(30%, 30%) rotate(45deg); }
+}
+
+/* Swipe card states */
+.swipe-card {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s;
+}
+
+.swipe-left {
+  transform: translate(-150%, 10px) rotate(-15deg) !important;
+  opacity: 0;
+}
+
+.swipe-right {
+  transform: translate(150%, 10px) rotate(15deg) !important;
+  opacity: 0;
+}
+
+/* Pulse streak flame */
+@keyframes flameGlow {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 2px rgba(245, 158, 11, 0.5)); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8)); }
+}
+.streak-active {
+  animation: flameGlow 1.5s infinite ease-in-out;
+}
+
+/* 🧬 AI 알고리즘 스캔 애니메이션 */
+@keyframes scanning {
+  0% { top: 0%; opacity: 0.3; }
+  50% { top: 100%; opacity: 1; }
+  100% { top: 0%; opacity: 0.3; }
+}
+
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #a78bfa, #34d399, #a78bfa, transparent);
+  box-shadow: 0 0 8px #8b5cf6, 0 0 15px #10b981;
+  animation: scanning 2s infinite ease-in-out;
+}
+
+/* 맥동하는 소프트 네온 글로우 */
+@keyframes neonPulse {
+  0%, 100% { filter: drop-shadow(0 0 4px rgba(139, 92, 246, 0.3)); }
+  50% { filter: drop-shadow(0 0 12px rgba(139, 92, 246, 0.7)) drop-shadow(0 0 20px rgba(16, 185, 129, 0.4)); }
+}
+
+.gem-neon-glow {
+  animation: neonPulse 2s infinite ease-in-out;
+}
+
+/* 게이지 부드러운 전이 */
+.progress-bar-fill {
+  transition: width 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
