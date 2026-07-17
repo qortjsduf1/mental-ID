@@ -2057,7 +2057,7 @@ export default function App() {
           <div className="my-auto py-4 flex flex-col items-center justify-center z-10 float-slow" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContents: 'center' }}>
             <div className="p-3 bg-white/70 border border-purple-500/15 rounded-[36px] shadow-lg shadow-rose-950/5 max-w-[260px] backdrop-blur-md">
               <img 
-                src="/pastel_mental_id_logo.jpg" 
+                src="pastel_mental_id_logo.jpg" 
                 alt="마음신분증 픽셀 로고" 
                 className="w-full h-auto rounded-[24px] object-cover border border-white/80"
               />
